@@ -1,0 +1,11 @@
+<%- include("./partials/header.ejs") %>
+
+<h1 style="text-align: center;"><%= subtitle %></h1>
+
+<h3 style="text-align: center;">by: <%= title %></h3>
+
+<p style="text-align: center; font-size: medium;"><%= content %></p>
+
+<a href="/delete/<%=post_number%>"><button type="button" class="btn btn-outline-danger" style="display: flex; flex-direction: row; margin-top: 20px;">Delete the post</button></a>
+
+<%- include("./partials/footer.ejs") %>

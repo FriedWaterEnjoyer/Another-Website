@@ -1,0 +1,111 @@
+<%- include("./partials/header.ejs") %>
+
+    <h1 class="wth">Blogs For Logs</h1>
+
+
+    <h3 style="text-align: center;">Other People's Posts:</h3>
+
+    <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+        
+        <div class="list-group">
+            
+            <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                
+                <img src="https://m.media-amazon.com/images/I/71yLeiB0LkL._UF894,1000_QL80_.jpg" alt="" width="30" height="30" class="rounded-circle flex-shrink-0">
+                
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>
+                        
+                        <h6 class="mb-0">Just wanted to tell you, that</h6>
+                        
+                        <p class="mb-0 opacity-75">You're doing amazing, keep moving, and eventually, you'll power through and make it through.</p>
+                    
+                    </div>
+                    
+                    <small class="opacity-50 text-nowrap">2hrs</small>
+                
+                </div>
+            </a>
+            
+            <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                
+                <img src="https://m.media-amazon.com/images/I/71yLeiB0LkL._UF894,1000_QL80_.jpg" alt="" width="32" height="32" class="rounded-circle flex-shrink-0">
+                
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>
+                        
+                        <h6 class="mb-0">If you're struggling in these times (like I do)</h6>
+                        
+                        <p class="mb-0 opacity-75">Then just know, that you will achieve your dreams, no matter how hard life presses on you.</p>
+                    
+                    </div>
+                    
+                    <small class="opacity-50 text-nowrap">3d</small>
+                
+                </div>
+            </a>
+            
+            <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                
+                <img src="https://m.media-amazon.com/images/I/71yLeiB0LkL._UF894,1000_QL80_.jpg" alt="" width="32" height="32" class="rounded-circle flex-shrink-0">
+                
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    
+                    <div>
+                        
+                        <h6 class="mb-0">Hopefully you'll, eventually, be satisfied with your life</h6>
+                        
+                        <p class="mb-0 opacity-75">And I hope that your close ones believe in you, if not, then I do. :3</p>
+                    
+                    </div>
+                    
+                    <small class="opacity-50 text-nowrap">1w</small>
+                
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <h3 style="text-align: center;">Your Posts:</h3>
+
+    <div class="button_cont">
+
+    <a href="/form"><button type="button" class="btn btn-outline-success">Create Your Blog</button></a>
+
+    </div>
+
+    <% if (posts.length === 0) { %>
+
+        <h5 style="text-align: center; padding-top: 15px;">No posts to be found. If you want to see something here - please press the button above.</h5>
+
+    <% } else { %>
+
+        <% for (let a=0; a<posts.length; a++) { %>
+
+            <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+
+                <div class="list-group">
+                    
+                    <a href="/pre/<%=posts[a]%>" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+
+                    <img src="https://i.pinimg.com/236x/44/b9/65/44b965ef15668cf3ec5d7888be48ec3a.jpg" alt="" width="32" height="32" class="rounded-circle flex-shrink-0">
+
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            
+                            <h6 class="mb-0"><%= posts[a][0] %></h6>
+                            
+                            <p class="mb-0 opacity-75"><%= posts[a][1] %></p>
+                        </div>
+                        
+                        <small class="opacity-50 text-nowrap">now</small>
+                    
+                    </div>
+                </a>
+
+        <% } %>
+
+    <% } %>
+
+<%- include("./partials/footer.ejs") %>
