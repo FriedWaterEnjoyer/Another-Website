@@ -108,4 +108,4 @@ da_app.listen(port, () => {
 
 })
 
-//318 lines of active code... But yaeh, I did it :D and it wasn't that atroscious. Though no "edit" feature :3
+//318 lines of active code... But yeah, I did it :D and it wasn't that atroscious. Though no "edit" feature :3
